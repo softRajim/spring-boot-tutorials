@@ -18,7 +18,7 @@
 
   <properties>
     <java.version>11</java.version>
-    <kotlin.version>1.5.0</kotlin.version>
+    <kotlin.version>2.1.0</kotlin.version>
   </properties>
 
   <dependencies>
@@ -124,8 +124,7 @@
             <phase>validate</phase>
             <configuration>
               <target name="ktlint">
-                <java taskname="ktlint" dir="${basedir}" fork="true" failonerror="true"
-                      classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
+                <java taskname="ktlint" dir="${basedir}" fork="true" failonerror="true" classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
                   <arg value="src/**/*.kt"/>
                 </java>
               </target>
@@ -138,8 +137,7 @@
             <id>ktlint-format</id>
             <configuration>
               <target name="ktlint">
-                <java taskname="ktlint" dir="${basedir}" fork="true" failonerror="true"
-                      classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
+                <java taskname="ktlint" dir="${basedir}" fork="true" failonerror="true" classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
                   <arg value="-F"/>
                   <arg value="src/**/*.kt"/>
                 </java>
